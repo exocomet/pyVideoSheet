@@ -139,7 +139,7 @@ class Sheet:
         d = ImageDraw.Draw(header)
         d.text((10,10), "File Name: "+os.path.basename(self.video.filename), font=self.font,fill=self.textColour)
         d.text((10,30), "File Size: "+("{:10.6f}".format(self.video.filesize))+" MB", font=self.font,fill=self.textColour)
-        d.text((10,50), "Resolution: "+'width'+"x"+'height', font=self.font,fill=self.textColour)
+        d.text((10,50), "Resolution: "+str(width)+"x"+str(height), font=self.font,fill=self.textColour)
         d.text((10,70), "Duration: "+timestring, font=self.font,fill=self.textColour)
         self.header = header
         return header
