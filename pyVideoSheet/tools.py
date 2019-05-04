@@ -36,8 +36,6 @@ class Video:
 
     def getFrameAt(self,seektime):
         timestring = self.getTimeString(seektime)
-        print(timestring)
-        print(self.filename)
         p = Popen(["ffmpeg","-ss",timestring,"-i",self.filename,"-f","image2","-frames:v","1","-c:v","png","-loglevel","8","-"],stdout=PIPE)
         pout = p.communicate()
         try:
