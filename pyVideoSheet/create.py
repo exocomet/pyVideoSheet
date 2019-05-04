@@ -1,4 +1,4 @@
-from __init__ import Video, Sheet
+from pyVideoSheet.tools import Video, Sheet
 import argparse
 
 if __name__ == "__main__":
